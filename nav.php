@@ -7,36 +7,36 @@ $set = new \Tsugi\UI\MenuSet();
 $set->setHome($CFG->servicename, $CFG->apphome);
 
 if ( isset($CFG->lessons) ) {
-    $set->addLeft('Lessons', $R.'lessons');
+    $set->addLeft('Lecciones', $R.'lessons');
 }
 if ( isset($_SESSION['id']) ) {
-    $set->addLeft('My Progress', $R.'assignments');
+    $set->addLeft('Asignaciones', $R.'assignments');
 } else {
-    $set->addLeft('Assignments', $R.'assn');
+    $set->addLeft('Asignaciones', $R.'assn');
 }
 
 if ( isset($_SESSION['id']) ) {
     $submenu = new \Tsugi\UI\Menu();
-    $submenu->addLink('Profile', $R.'profile');
+    $submenu->addLink('Perfil', $R.'profile');
     if ( isset($CFG->google_map_api_key) ) {
-        $submenu->addLink('Map', $R.'map');
+        $submenu->addLink('Mapa', $R.'map');
     }
     if ( isset($CFG->badge_path)  ) {
-        $submenu->addLink('Badges', $R.'badges');
+        $submenu->addLink('Insignias', $R.'badges');
     }
     if ( file_exists('materials.php') ) {
-        $submenu->addLink('Materials', $R.'materials');
+        $submenu->addLink('Materiales', $R.'materials');
     }
     if ( file_exists('privacy.php') ) {
-        $submenu->addLink('Privacy', $R.'privacy');
+        $submenu->addLink('Intimidad', $R.'privacy');
     }
     if ( $CFG->providekeys ) {
-        $submenu->addLink('LMS Integration', $T . 'settings');
+        $submenu->addLink('LMS Integración', $T . 'settings');
     }
     if ( isset($CFG->google_classroom_secret) ) {
         $submenu->addLink('Google Classroom', $T.'gclass/login');
     }
-    $submenu->addLink('Free App Store', 'https://www.tsugicloud.org');
+    $submenu->addLink('App Store gratis', 'https://www.tsugicloud.org');
     if ( $CFG->DEVELOPER ) {
         $submenu->addLink('Test LTI Tools', $T . 'dev');
     }
@@ -44,7 +44,7 @@ if ( isset($_SESSION['id']) ) {
     if ( isset($_COOKIE['adminmenu']) && $_COOKIE['adminmenu'] == "true" ) {
         $submenu->addLink('Administer', $T . 'admin/');
     }
-    $submenu->addLink('Logout', $R.'logout');
+    $submenu->addLink('Cerrar sesión', $R.'logout');
     if ( isset($_SESSION['avatar']) ) {
         $set->addRight('<img src="'.$_SESSION['avatar'].'" style="height: 2em;"/>', $submenu);
         // htmlentities($_SESSION['displayname']), $submenu);
@@ -52,7 +52,7 @@ if ( isset($_SESSION['id']) ) {
         $set->addRight(htmlentities($_SESSION['displayname']), $submenu);
     }
 } else {
-    $set->addRight('Login', $T.'login.php');
+    $set->addRight('Iniciar sesión', $T.'login.php');
 }
 $set->addRight('Instructor', 'http://www.dr-chuck.com');
 

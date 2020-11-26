@@ -46,7 +46,7 @@
     "references" : [
         {
             "title" : "Hypertext Transfer Protocol",
-            "href" : "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"
+            "href" : "https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_hipertexto"
         },
         {
             "title" : "What Happens When You Click a Link? - Computerphile",
@@ -483,7 +483,7 @@
     "references" : [
         {
             "title" : "Model-View-Controller (Wikipedia)",
-            "href": "https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"
+            "href": "https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador"
         },
         {
             "title" : "Django and MVC (FAQ)",
@@ -605,11 +605,11 @@
         },
         {
             "title" : "Cross-Site Scripting (XSS)",
-            "href": "https://en.wikipedia.org/wiki/Cross-site_scripting"
+            "href": "https://es.wikipedia.org/wiki/Cross-site_scripting"
         },
         {
             "title" : "HTTP Status Codes",
-            "href": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
+            "href": "https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_de_estado_HTTP"
         },
         {
             "title" : "Django URL Resolving",
